@@ -1,4 +1,4 @@
-const ModularFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     port: 8081,
   },
   plugins: [
-    new ModularFederationPlugin({
+    new ModuleFederationPlugin({
       name: "products",
       filename: "remoteEntry.js",
       exposes: {
